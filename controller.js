@@ -34,8 +34,6 @@ function deleteTodo(id) {
 
     const index = data.findIndex((item) => item.id === id);
     console.log("index ", index);
-    console.log("data[id].status ",data[index].status);
-    // data[ID].status = !data[ID].status;
 
     data.splice(index,1);
 
