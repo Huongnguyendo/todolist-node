@@ -76,6 +76,27 @@ yargs.command({
 	}
 });
 
+
+yargs.command({
+	command: "list_done",
+    describe: "list all items with done status",
+    
+	handler: function (arr) {
+        let listDone = todoController.listDone();
+        console.log(listDone);
+	}
+});
+
+yargs.command({
+	command: "list_undone",
+    describe: "list all items with undone status",
+    
+	handler: function (arr) {
+        let listUnDone = todoController.listUnDone();
+        console.log(listUnDone);
+	}
+});
+
 yargs.parse();
 
 

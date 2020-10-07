@@ -52,10 +52,24 @@ function toggleTodo(id) {
   return data;
 }
 
+function listDone() {
+  const data = loadData();
+  let listDone = data.filter((item) => item.status == true);
+  return listDone;
+}
+
+function listUnDone() {
+  const data = loadData();
+  let listUnDone = data.filter((item) => item.status == false);
+  return listUnDone;
+}
+
 module.exports = {
   loadData: loadData,
   saveData: saveData,
   createTodo: createTodo,
   deleteTodo: deleteTodo,
   toggleTodo: toggleTodo,
+  listDone: listDone,
+  listUnDone: listUnDone,
 };
