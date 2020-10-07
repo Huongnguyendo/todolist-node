@@ -13,7 +13,7 @@ yargs.command({
         // console.log(data);
 
         if(data) {
-            data.map((item) => item.status ? console.log(chalk.green.bgYellow(item.todo, item.status)) : console.log(chalk.red.bgCyanBright(item.todo, item.status)));
+            data.map((item) => item.status ? console.log(chalk.green.bgYellow("Task:", item.todo, "Status: ", item.status)) : console.log(chalk.red.bgCyanBright("Task:", item.todo, "Status: ", item.status)));
         }
     },
 });
