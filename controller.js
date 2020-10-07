@@ -10,7 +10,6 @@ const loadData = () => {
 const saveData = (todoList) => {
   // save todoList into json file
   const todoJSON = JSON.stringify(todoList);
-  // save into file
   fs.writeFileSync("data.json", todoJSON);
 };
 
